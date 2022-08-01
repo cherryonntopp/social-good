@@ -1,3 +1,21 @@
+// GENERATE EMAIL SCRIPT // 
+
+var displayScript = document.getElementById("scriptReturned");
+var scriptBtn = document.getElementById("scriptBtn");
+
+if (scriptBtn) {
+  scriptBtn.addEventListener("click", generateScript);
+}
+
+function generateScript() {
+	var name = document.getElementById("name").value;
+	var place = document.getElementById("place").value;
+	var teaching = document.getElementById("teaching").value;
+	var specialty = document.getElementById("specialty").value;
+
+	displayScript.innerHTML = "Dear " + place + ", my name is " + name + ". I am striving to introduce younger children to STEM fields to promote curiosity and motivation. The gender gap in STEM still persists today, with a great imbalance. As I specialize in " + specialty + ", I would like to have a chance to have a presentation to the younger audiences and " + teaching + ". Exposure is a very important aspect in the beginning of a child's growing interest toward a specific topic. Thank you so much, and I would be very grateful if I am given the chance to.";
+}
+
 // STATISTICS FACT GENERATOR // 
 
 var factList = [
@@ -24,7 +42,6 @@ function displayFact() {
     count = 0;
   }
 }
-
 
 // DID YOU KNOW FACT GENERATOR // 
 
@@ -57,20 +74,3 @@ function displayFact2() {
 }
 
 
-// GENERATE EMAIL SCRIPT // 
-
-var displayScript = document.getElementById("scriptReturned");
-var scriptBtn = document.getElementById("scriptBtn");
-
-if (scriptBtn) {
-  scriptBtn.addEventListener("click", generateScript);
-}
-
-function generateScript() {
-	var name = document.getElementById("name").value;
-	var place = document.getElementById("place").value;
-	var teaching = document.getElementById("teaching").value;
-	var specialty = document.getElementById("specialty").value;
-
-	displayScript.innerHTML = "Dear " + place + ", my name is " + name + ". I am striving to introduce younger children to STEM fields to promote curiosity and motivation. The gender gap in STEM still persists today, with a great imbalance. As I specialize in " + specialty + ", I would like to have a chance to have a presentation to the younger audiences and " + teaching + ". Exposure is a very important aspect in the beginning of a child's growing interest toward a specific topic. Thank you so much, and I would be very grateful if I am given the chance to.";
-}
